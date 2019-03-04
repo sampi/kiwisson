@@ -1,0 +1,6 @@
+.keyboard {
+	position: relative;
+	display: grid;
+	grid: auto-flow / repeat(3, 1fr);
+	margin: 1rem 0;
+}
