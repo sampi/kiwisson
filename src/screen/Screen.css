@@ -16,6 +16,7 @@
 	box-shadow: inset 0rem -1rem 10rem -1rem white,
 		0 0 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
 	background-color: var(--screen-bg-color);
+	pointer-events: none;
 }
 
 .screen::after {

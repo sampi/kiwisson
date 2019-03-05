@@ -17,14 +17,10 @@ export function handleClick(
 	label = '',
 	special = ''
 ) {
-	if (
-		global.window &&
-		global.window.navigator &&
-		global.window.navigator.vibrate &&
-		typeof global.window.navigator.vibrate === 'function'
-	) {
+	try {
 		global.window.navigator.vibrate(5);
-	}
+	} catch (e) {}
+
 	setInput(
 		special === 'delete' ? input.replace(/([0-9]?[*]*$)/, '') : input + label
 	);
@@ -41,6 +37,7 @@ export default function({ label = '', subtitle = '', special = '' }) {
 	return (
 		<button
 			className="key"
+			data-cy={special || label}
 			onClick={() => handleClick(input, setInput, label, special)}
 		>
 			<figure>

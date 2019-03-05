@@ -3,6 +3,7 @@ language: node_js
 cache:
   directories:
     - ~/.npm
+    - ~/.cache
 notifications:
   email: false
 before_install:
@@ -22,6 +23,7 @@ install:
 script:
   - travis_retry npm run build
   - travis_retry npm test
+  - travis_retry npm run test:cypress
 before_script:
   - |
     if [[ $TRAVIS_BRANCH == *"greenkeeper"* ]]; then

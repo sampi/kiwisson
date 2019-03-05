@@ -14,7 +14,7 @@ export const keys = [
 	{ label: '7', subtitle: 'pqrs' },
 	{ label: '8', subtitle: 'tuv' },
 	{ label: '9', subtitle: 'wxyz' },
-	{ label: '*' },
+	{ label: '*', special: 'alt' },
 	{ label: '0' },
 	{ label: '<', special: 'delete' }
 ];
