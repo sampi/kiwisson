@@ -1,3 +1,9 @@
+/**
+ * Labels, subtitles and special functions
+ * of the phone keyboard.
+ *
+ * @type {Array<{label: String, subtitle: =String, special: =String}>}
+ */
 export const keys = [
 	{ label: '1', subtitle: '-' },
 	{ label: '2', subtitle: 'abc' },

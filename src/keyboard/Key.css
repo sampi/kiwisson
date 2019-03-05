@@ -1,5 +1,8 @@
+/* Key ..................................................................... */
+
 .key,
 .key::after {
+	/* Make the buttons round */
 	border-radius: 50% 50%;
 	overflow: hidden;
 	transition: transform 0.05s, box-shadow 0.05s, background 0.05s;
@@ -8,6 +11,8 @@
 	position: relative;
 	margin: 0.5rem;
 	height: 2.5rem;
+	/* Add some super ugly skeumorphism */
+	box-shadow: 0 0 0.3rem 0 rgba(0, 0, 0, 0.5);
 	background: var(--noise),
 		radial-gradient(
 			ellipse at top,
@@ -17,9 +22,9 @@
 	background-color: var(--key-bg-color);
 	color: var(--key-text-color);
 	border-width: 0;
-	box-shadow: 0 0 0.3rem 0 rgba(0, 0, 0, 0.5);
 }
 .key:focus {
+	/* This outline ruins the retro immersion */
 	outline: 0;
 }
 .key::after {
@@ -29,23 +34,27 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
+	/* Continue adding that super ugly skeumorphism */
 	box-shadow: inset -0.1rem -0.1rem 1rem 0.1rem rgba(255, 255, 255, 0.2);
 }
 .key:active,
 .key:active::after {
+	/* Fake depression of button */
 	transform: translate(0.1rem, 0.1rem);
 }
 .key:active {
+	/* Fake depression of button */
 	box-shadow: 0 0 0.3rem 0 rgba(0, 0, 0, 0.5);
 }
 .key:active::after {
+	/* Fake depression of button */
 	box-shadow: inset -0.5rem -0.5rem 1rem 0.1rem rgba(255, 255, 255, 0.2);
 }
 
 .key figure {
 	display: flex;
-	margin: 0;
 	padding: 0 1.1rem;
+	/* It didn't look ugly enough without italic! */
 	font-style: italic;
 }
 
@@ -57,8 +66,6 @@
 
 .key p {
 	flex: auto;
-	margin: 0;
-	padding: 0;
 	font-size: 1.4rem;
 	text-align: left;
 }

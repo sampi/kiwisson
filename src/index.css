@@ -1,3 +1,6 @@
+/* Styles .................................................................. */
+
+/* Create React App's webpack config will hoist all CSS @imports */
 @import './vars.css';
 
 * {
@@ -26,4 +29,15 @@ html {
 			rgba(0, 0, 0, 0)
 		);
 	background-color: #0058bd;
+}
+
+/* If the aspect ratio is not tall enough, everything should be centered */
+@media (min-aspect-ratio: 860/962) {
+	html,
+	body {
+		font-size: 4vh;
+	}
+	main {
+		width: 21rem;
+	}
 }

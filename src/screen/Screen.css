@@ -1,18 +1,23 @@
+/* Screen .................................................................. */
+
 .screen {
 	position: relative;
 	flex: 1;
 	padding: 1rem;
 	margin-top: 1rem;
-	background-color: var(--bg-color);
 	font-size: 1.5rem;
 	line-height: 2rem;
 	overflow-wrap: break-word;
 	word-break: break-word;
 	hyphens: none;
+	overflow: hidden;
+	color: var(--screen-text-color);
+	/* Add some super ugly skeumorphism */
 	box-shadow: inset 0rem -1rem 10rem -1rem white,
 		0 0 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
-	overflow: hidden;
+	background-color: var(--screen-bg-color);
 }
+
 .screen::after {
 	content: '';
 	position: absolute;
@@ -20,16 +25,17 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
+	/* Add even more ugly skeumorphism */
 	background: var(--noise),
 		repeating-linear-gradient(
 			to right,
-			var(--bg-color) 0 var(--pixel-gap),
+			var(--screen-bg-color) 0 var(--pixel-gap),
 			transparent calc(2 * var(--pixel-gap))
 				calc(2 * var(--pixel-gap) + var(--pixel-width))
 		),
 		repeating-linear-gradient(
 			to bottom,
-			var(--bg-color) 0 var(--pixel-gap),
+			var(--screen-bg-color) 0 var(--pixel-gap),
 			transparent calc(2 * var(--pixel-gap))
 				calc(2 * var(--pixel-gap) + var(--pixel-width))
 		),
@@ -42,13 +48,12 @@
 	box-shadow: inset -0.1rem -0.1rem 0.5rem 0.1rem rgba(0, 0, 0, 0.5);
 }
 .screen figure {
-	margin: 0;
-	padding: 0;
-	height: 100%;
+	/* Nothing made sense, until I made it ALL CAPITALS */
 	text-transform: uppercase;
 	overflow: hidden;
 }
 .screen figure::after {
+	/* This blinking underscore makes the user feel like a hacker */
 	content: '_';
 	animation: 2s blink step-end infinite;
 }

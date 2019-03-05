@@ -1,6 +1,9 @@
+/* Keyboard ................................................................ */
+
 .keyboard {
 	position: relative;
 	display: grid;
+	/* This will definitely not work in IE11 */
 	grid: auto-flow / repeat(3, 1fr);
 	margin: 1rem 0;
 }
