@@ -34,7 +34,7 @@ after_script:
     fi
 after_success:
   - npm run deploy;
-  - npm run semantic-release;
+  - npx semantic-release;
 branches:
   only:
     - master
