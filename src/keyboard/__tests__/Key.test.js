@@ -10,13 +10,6 @@ it('renders without crashing', () => {
 
 describe('handleClick', () => {
 	const setInput = jest.fn(() => {});
-	beforeAll(() => {
-		Object.defineProperty(
-			global.window.navigator,
-			'vibrate',
-			jest.fn(() => {})
-		);
-	});
 	it("appends the pressed key's label to the input when clicked", () => {
 		handleClick('', setInput, '3');
 		expect(setInput.mock.calls.length).toBe(1);

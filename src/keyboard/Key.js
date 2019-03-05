@@ -18,7 +18,7 @@ export function handleClick(
 	special = ''
 ) {
 	try {
-		global.window.navigator.vibrate(5);
+		window.navigator.vibrate(5);
 	} catch (e) {}
 
 	setInput(
