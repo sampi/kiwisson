@@ -1,0 +1,40 @@
+dist: xenial
+language: node_js
+cache:
+  directories:
+    - ~/.npm
+notifications:
+  email: false
+before_install:
+  - |
+    if [[ $TRAVIS_BRANCH == *"greenkeeper"* ]]; then
+      travis_retry npm i -g greenkeeper-lockfile;
+    else
+      travis_retry npm i -g npm@latest;
+    fi
+install:
+  - |
+    if [[ $TRAVIS_BRANCH == *"greenkeeper"* ]]; then
+      travis_retry npm install;
+    else
+      travis_retry npm ci;
+    fi
+script:
+  - travis_retry npm run build
+  - travis_retry npm test
+before_script:
+  - |
+    if [[ $TRAVIS_BRANCH == *"greenkeeper"* ]]; then
+      greenkeeper-lockfile-update;
+    fi
+after_script:
+  - |
+    if [[ $TRAVIS_BRANCH == *"greenkeeper"* ]]; then
+      greenkeeper-lockfile-upload;
+    fi
+after_success:
+  - npm run semantic-release;
+branches:
+  only:
+    - master
+    - /^greenkeeper.*$/
