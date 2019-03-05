@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/t9-keyboard/precache-manifest.f0f5838733377035ce64813a64cc47f0.js"
+  "/t9-keyboard/precache-manifest.8bc8157835867a326fdecf52f2b12e66.js"
 );
 
 workbox.clientsClaim();

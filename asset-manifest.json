@@ -1,13 +1,17 @@
 {
-  "main.css": "/t9-keyboard/static/css/main.b9e83f28.chunk.css",
-  "main.js": "/t9-keyboard/static/js/main.af8dd7c5.chunk.js",
-  "main.js.map": "/t9-keyboard/static/js/main.af8dd7c5.chunk.js.map",
-  "runtime~main.js": "/t9-keyboard/static/js/runtime~main.e8d5f805.js",
-  "runtime~main.js.map": "/t9-keyboard/static/js/runtime~main.e8d5f805.js.map",
-  "static/js/2.57a5c759.chunk.js": "/t9-keyboard/static/js/2.57a5c759.chunk.js",
-  "static/js/2.57a5c759.chunk.js.map": "/t9-keyboard/static/js/2.57a5c759.chunk.js.map",
+  "main.css": "/t9-keyboard/static/css/main.affcdbd4.chunk.css",
+  "main.js": "/t9-keyboard/static/js/main.51d8119f.chunk.js",
+  "main.js.map": "/t9-keyboard/static/js/main.51d8119f.chunk.js.map",
+  "runtime~main.js": "/t9-keyboard/static/js/runtime~main.f0e3e009.js",
+  "runtime~main.js.map": "/t9-keyboard/static/js/runtime~main.f0e3e009.js.map",
+  "server.js": "/t9-keyboard/static/js/server.7ec3d5dc.chunk.js",
+  "server.js.map": "/t9-keyboard/static/js/server.7ec3d5dc.chunk.js.map",
+  "words.js": "/t9-keyboard/static/js/words.57179120.chunk.js",
+  "words.js.map": "/t9-keyboard/static/js/words.57179120.chunk.js.map",
+  "static/js/4.0996eb54.chunk.js": "/t9-keyboard/static/js/4.0996eb54.chunk.js",
+  "static/js/4.0996eb54.chunk.js.map": "/t9-keyboard/static/js/4.0996eb54.chunk.js.map",
   "index.html": "/t9-keyboard/index.html",
-  "precache-manifest.f0f5838733377035ce64813a64cc47f0.js": "/t9-keyboard/precache-manifest.f0f5838733377035ce64813a64cc47f0.js",
+  "precache-manifest.8bc8157835867a326fdecf52f2b12e66.js": "/t9-keyboard/precache-manifest.8bc8157835867a326fdecf52f2b12e66.js",
   "service-worker.js": "/t9-keyboard/service-worker.js",
-  "static/css/main.b9e83f28.chunk.css.map": "/t9-keyboard/static/css/main.b9e83f28.chunk.css.map"
+  "static/css/main.affcdbd4.chunk.css.map": "/t9-keyboard/static/css/main.affcdbd4.chunk.css.map"
 }
