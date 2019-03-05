@@ -19,6 +19,7 @@ body {
 	position: relative;
 	width: 100%;
 	height: 100%;
+	touch-action: manipulation;
 }
 html {
 	background: var(--noise),
