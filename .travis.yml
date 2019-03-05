@@ -1,4 +1,3 @@
-dist: xenial
 language: node_js
 cache:
   directories:
@@ -21,8 +20,8 @@ install:
       travis_retry npm ci;
     fi
 script:
-  - travis_retry npm run build
   - travis_retry npm test
+  - travis_retry npm run build
   - travis_retry npm run test:cypress
 before_script:
   - |
