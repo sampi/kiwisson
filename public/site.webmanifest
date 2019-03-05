@@ -1,6 +1,7 @@
 {
     "name": "Kiwisson T9",
     "short_name": "Kiwisson T9",
+    "start_url": ".",
     "icons": [
         {
             "src": "./android-chrome-192x192.png",
