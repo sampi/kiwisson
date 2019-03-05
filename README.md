@@ -1,2 +1,1 @@
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Greenkeeper badge](https://badges.greenkeeper.io/sampi/kiwisson.svg)](https://greenkeeper.io/)
-
+[![Build Status](https://travis-ci.org/sampi/kiwisson.svg?branch=master)](https://travis-ci.org/sampi/kiwisson) [![Greenkeeper badge](https://badges.greenkeeper.io/sampi/kiwisson.svg)](https://greenkeeper.io/) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
