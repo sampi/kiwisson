@@ -2,7 +2,7 @@
 	"name": "t9-keyboard",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://sampi.github.io/t9-keyboard",
+	"homepage": "https://kiwisson.sampi.io/",
 	"dependencies": {
 		"gh-pages": "^2.0.1",
 		"react": "^16.8.3",
