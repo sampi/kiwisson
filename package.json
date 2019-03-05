@@ -13,7 +13,7 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"deploy": "gh-pages -d build",
+		"deploy": "gh-pages --repo https://$GH_TOKEN@github.com/sampi/kiwisson.git -d build",
 		"format": "prettier --write \"{{src,public}/**/*.{js,json,css,html},package.json}\"",
 		"commit": "git-cz",
 		"semantic-release": "semantic-release"
