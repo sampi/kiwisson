@@ -14,6 +14,7 @@ export default function() {
 	return (
 		<InputContext.Provider value={[input, setInput]}>
 			<main>
+				<header>KIWISSON</header>
 				<Screen />
 				<Keyboard />
 			</main>

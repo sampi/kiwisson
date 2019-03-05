@@ -13,6 +13,7 @@ export default function() {
 	const [output, setOutput] = React.useState('');
 
 	React.useEffect(() => {
+		// Split the "server" into a separate chunk
 		import(/* webpackChunkName: "server" */ '../server/server')
 			.then(({ numsToText }) => setOutput(numsToText(input)))
 			.catch(e => console.error(e));

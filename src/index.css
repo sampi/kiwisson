@@ -28,7 +28,7 @@ html {
 			rgba(0, 0, 0, 0.3),
 			rgba(0, 0, 0, 0)
 		);
-	background-color: #0058bd;
+	background-color: var(--bg-color);
 }
 
 /* If the aspect ratio is not tall enough, everything should be centered */

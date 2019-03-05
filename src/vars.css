@@ -1,5 +1,11 @@
 /* Variables ............................................................... */
 :root {
+	/* Main background color */
+	--bg-color: #0058bd;
+
+	/* Logo color */
+	--logo-text-color: rgba(255, 255, 255, 0.5);
+
 	/* Screen colors */
 	--screen-bg-color: #7b865e;
 	--screen-text-color: #131514;

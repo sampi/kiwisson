@@ -3,7 +3,8 @@
  * @see https://github.com/first20hours/google-10000-english
  * @type {String}
  */
-export const words = `the
+export const words = `kiwi
+the
 of
 and
 to

@@ -13,3 +13,14 @@ main {
 	align-items: stretch;
 	align-content: space-between;
 }
+
+main header {
+	text-align: center;
+	color: var(--logo-text-color);
+}
+main header::after {
+	content: '|||';
+	display: inline-block;
+	letter-spacing: -0.6rem;
+	transform: translate(0.1rem, -0.4rem) rotate(75deg);
+}

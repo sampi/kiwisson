@@ -5,6 +5,7 @@ import { keys } from '../constants';
  * @type {Array<String>}
  */
 let wordMap = [];
+// Split the words module into a separate chunk
 import(/* webpackChunkName: "words" */ './words').then(
 	({ words }) => (wordMap = words.split('\n'))
 );
