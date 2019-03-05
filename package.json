@@ -1,6 +1,6 @@
 {
 	"name": "kiwisson",
-	"version": "0.1.0",
+	"version": "0.0.0-semantic-release",
 	"private": true,
 	"homepage": "https://kiwisson.sampi.io/",
 	"dependencies": {
@@ -17,7 +17,7 @@
 		"cypress": "cypress run --record",
 		"eject": "react-scripts eject",
 		"deploy": "gh-pages --repo https://$GH_TOKEN@github.com/sampi/kiwisson.git -d build",
-		"format": "prettier --write \"{{src,public,cypress}/**/*.{js,json,css,html},package.json}\"",
+		"format": "prettier --write \"{{src,public,cypress}/**/*.{js,json,css,html},package.json,README.md}\"",
 		"commit": "git-cz"
 	},
 	"eslintConfig": {
