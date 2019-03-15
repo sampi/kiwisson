@@ -13,6 +13,7 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"test:cypress": "start-server-and-test server http://localhost:3003 cypress",
+		"test:performance": "NODE_OPTIONS='--experimental-modules --no-warnings --loader ./loader/custom-loader.mjs' node src/server/__perf__/server.perf.js",
 		"server": "npx http-server ./build  -p 3003",
 		"cypress": "cypress run --record",
 		"eject": "react-scripts eject",
