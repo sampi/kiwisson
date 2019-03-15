@@ -8,10 +8,12 @@ import { keys } from '../constants';
  *
  * (It's just a bunch of Keys.)
  */
-export default () => (
-	<article className="keyboard">
-		{keys.map((key, idx) => (
-			<Key key={idx} {...key} />
-		))}
-	</article>
-);
+export default function Keyboard() {
+	return (
+		<article className="keyboard">
+			{keys.map((key, idx) => (
+				<Key key={idx} {...key} />
+			))}
+		</article>
+	);
+}

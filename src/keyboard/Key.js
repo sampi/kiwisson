@@ -32,7 +32,7 @@ export function handleClick(
  * @param  {=String} props.subtitle Subtitle of the Key
  * @param  {=String} props.special  Special function of the key
  */
-export default function({ label = '', subtitle = '', special = '' }) {
+export default function Key({ label = '', subtitle = '', special = '' }) {
 	const [input, setInput] = React.useContext(InputContext);
 	return (
 		<button

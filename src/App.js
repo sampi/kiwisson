@@ -8,7 +8,7 @@ import './App.css';
  * App Component
  * Context is set up here.
  */
-export default function() {
+export default function App() {
 	const [input, setInput] = React.useState('');
 
 	return (

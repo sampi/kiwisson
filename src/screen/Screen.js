@@ -8,7 +8,7 @@ import './Screen.css';
  * This Component consumes the InputContext using Hooks.
  * The backend would be hooked up here.
  */
-export default function() {
+export default function Screen() {
 	const [input] = React.useContext(InputContext);
 	const [output, setOutput] = React.useState('');
 
