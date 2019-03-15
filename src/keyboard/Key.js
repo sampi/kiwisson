@@ -34,12 +34,13 @@ export function handleClick(
  */
 export default function Key({ label = '', subtitle = '', special = '' }) {
 	const [input, setInput] = React.useContext(InputContext);
+	const clickCallback = React.useCallback(
+		() => handleClick(input, setInput, label, special),
+		[input, setInput, label, special]
+	);
+
 	return (
-		<button
-			className="key"
-			data-cy={special || label}
-			onClick={() => handleClick(input, setInput, label, special)}
-		>
+		<button className="key" data-cy={special || label} onClick={clickCallback}>
 			<figure>
 				<p>{label}</p>
 				{subtitle && <figcaption>{subtitle}</figcaption>}
