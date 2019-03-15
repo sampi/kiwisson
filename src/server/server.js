@@ -1,13 +1,15 @@
 import { keys } from '../constants';
 
 /**
- * Available dictionary of words
- * @type {Array<String>}
+ * Available dictionary of words,
+ * key - word
+ * value - frequency of use in English
+ * @type {Map<String, Number>}
  */
-let wordMap = [];
-// Split the words module into a separate chunk
-import(/* webpackChunkName: "words" */ './words').then(
-	({ words }) => (wordMap = words.split('\n'))
+let wordMap = new Map();
+// Build Map of words and frequencies
+import(/* webpackChunkName: "words" */ './words').then(({ words }) =>
+	words.forEach((word, frequency) => wordMap.set(word, frequency))
 );
 
 /**
@@ -21,36 +23,38 @@ function processWord(rawInput = '') {
 	// Normalize input by removing all * characters
 	const input = rawInput.split('*').join('');
 
-	// Construct RegExp to find matching words
-	const re = new RegExp(
-		// Start matching at the beginning of the string (^)
-		`^${input
-			// Split string to an array of characters
+	// Find matching words from the dictionary
+	const output =
+		// Split input in an Array of numbers
+		input
 			.split('')
-			// Only process numbers between 2...9
+			// Map each number to an Array of letters
 			.map(
 				num =>
 					(num = parseInt(num, 10)) &&
 					num >= 2 &&
 					num <= 9 &&
-					`[${keys[num - 1].subtitle}]`
+					keys[num - 1].subtitle.split('')
 			)
-			// Discard empty elements
+			// Filter out empty elements
 			.filter(Boolean)
-			// Join array to be a string
-			// Stop matching at the end of the string ($)
-			.join('')}$`,
-		'i'
-	);
-
-	// Find matching words from the dictionary
-	const output = wordMap
-		// For a minimal performance gain,
-		// Filter out any words that aren't
-		// the same length as the input
-		.filter(w => w.length === input.length)
-		// Match the remaining words against the RegExp
-		.filter(w => re.test(w));
+			// Find all possible permutations of each Array of letters
+			// by reducing all possible letters to be added to all of the words
+			.reduce(
+				(possibleWords, currentLetters) =>
+					possibleWords.reduce(
+						(combinations, currentLetter) =>
+							currentLetters
+								.map(letter => currentLetter + letter)
+								.concat(combinations),
+						[]
+					),
+				['']
+			)
+			// Filter out words that aren't in the dictionary
+			.filter(possibleMatch => wordMap.has(possibleMatch))
+			// Sort them based on frequency
+			.sort((a, b) => wordMap.get(a) - wordMap.get(b));
 
 	// If there aren't any matches, return the input string
 	if (!output.length) {
