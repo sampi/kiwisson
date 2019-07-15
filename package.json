@@ -36,7 +36,7 @@
 		"not ie 11"
 	],
 	"devDependencies": {
-		"@commitlint/cli": "^7.5.2",
+		"@commitlint/cli": "^8.1.0",
 		"@commitlint/config-conventional": "^7.5.0",
 		"@semantic-release/commit-analyzer": "^6.1.0",
 		"@semantic-release/git": "^7.0.8",
